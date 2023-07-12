@@ -1,0 +1,4 @@
+{
+    "impala_database": "default",
+    "presto_database":"presto_db"
+}

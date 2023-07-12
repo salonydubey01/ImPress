@@ -1,0 +1,8 @@
+{
+    "query_parameters": {
+        "complex_statement.impala": {
+            "a": "some_value",
+            "b": 42
+        }
+    }
+}

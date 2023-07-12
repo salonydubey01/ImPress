@@ -1,0 +1,312 @@
+{
+    "abs": {
+        "translation": "abs",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select abs(1.5)", "select abs(-1.5)"],
+        "returns": "double"
+    },
+    "acos": {
+        "translation": "acos",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select acos(0.5)"],
+        "returns": "double"
+    },
+    "asin": {
+        "translation": "asin",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select asin(0.5)"],
+        "returns": "double"
+    },
+    "atan": {
+        "translation": "atan",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select atan(0.5)"],
+        "returns": "double"
+    },
+    "atan2": {
+        "translation": "atan2",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select atan2(0.5)"],
+        "returns": "double"
+    },
+    "ceil": {
+        "translation": "ceil",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select ceil(1.5)"],
+        "returns": "double"
+    },
+    "ceiling": {
+        "translation": "ceiling",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select ceiling(1.5)"],
+        "returns": "double"
+    },
+    "cos": {
+        "translation": "cos",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select cos(3.14)"],
+        "returns": "double"
+    },
+    "cosh": {
+        "translation": "cosh",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select cosh(0.5)"],
+        "returns": "double"
+    },
+    "degrees": {
+        "translation": "degrees",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select degrees(3.14)"],
+        "returns": "double"
+    },
+    "e": {
+        "translation": "e",
+        "signature": [],
+        "examples": ["select e()"],
+        "returns": "double"
+    },
+    "exp": {
+        "translation": "exp",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select exp(2)"],
+        "returns": "double"
+    },
+    "dexp": {
+        "translation": "exp",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select exp(2)"],
+        "returns": "double"
+    },
+    "floor": {
+        "translation": "floor",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select floor(1.5)"],
+        "returns": "double"
+    },
+    "dfloor": {
+        "translation": "floor",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select floor(1.5)"],
+        "returns": "double"
+    },
+    "greatest": {
+        "translation": "greatest",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": ["select greatest(1.5, 3, 0, 5)", "select greatest(1.5, NULL, 0, 5)", "select greatest('a', 'c', 'b')"],
+        "returns": "any"
+    },
+    "is_inf": {
+        "translation": "is_infinite",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select is_infinite(5000)"],
+        "returns": "boolean"
+    },
+    "is_nan": {
+        "translation": "is_nan",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select is_nan(5000)"],
+        "returns": "boolean"
+    },
+    "least": {
+        "translation": "least",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": ["select least(1.5, 3, 0, 5)", "select least(1.5, NULL, 0, 5)", "select least('a', 'c', 'b')"],
+        "returns": "any"
+    },
+    "ln": {
+        "translation": "ln",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select ln(10)"],
+        "returns": "double"
+    },
+    "log2": {
+        "translation": "log2",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select log2(10)"],
+        "returns": "double"
+    },
+    "log10": {
+        "translation": "log10",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select log10(10)"],
+        "returns": "double"
+    },
+    "mod": {
+        "translation": "mod",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select mod(10,3)"],
+        "returns": "double"
+    },
+    "pi": {
+        "translation": "pi",
+        "signature": [],
+        "examples": ["select pi()"],
+        "returns": "double"
+    },
+    "power": {
+        "translation": "power",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select power(5,2)"],
+        "returns": "double"
+    },
+    "pow": {
+        "translation": "pow",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select pow(5,2)"],
+        "returns": "double"
+    },
+    "dpow": {
+        "translation": "pow",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select dpow(5,2)"],
+        "returns": "double"
+    },
+    "fpow": {
+        "translation": "pow",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1}
+        ],
+        "examples": ["select fpow(5,2)"],
+        "returns": "double"
+    },
+    "radians": {
+        "translation": "radians",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select radians(150)"],
+        "returns": "double"
+    },
+    "rand": {
+        "translation": "rand",
+        "signature": [],
+        "examples": ["select rand()"],
+        "returns": "double"
+    },
+    "randome": {
+        "translation": "random",
+        "signature": [],
+        "examples": ["select rand()"],
+        "returns": "double"
+    },
+    "sign": {
+        "translation": "sign",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select sign(7)"],
+        "returns": "double"
+    },
+    "sin": {
+        "translation": "sin",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select sin(3.14)"],
+        "returns": "double"
+    },
+    "sqrt": {
+        "translation": "sqrt",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select sqrt(36)"],
+        "returns": "double"
+    },
+    "tan": {
+        "translation": "tan",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select tan(3.14)"],
+        "returns": "double"
+    },
+    "tanh": {
+        "translation": "tanh",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select tanh(3.14)"],
+        "returns": "double"
+    },
+    
+    "dtrunc": {
+        "translation": "truncate",
+        "signature": [],
+        "examples": ["select dtrunc(3.5)"],
+        "returns": "double"
+    },
+    "truncate": {
+        "translation": "truncate",
+        "signature": [],
+        "examples": ["select truncate(3.5)"],
+        "returns": "double"
+    },
+    "width_bucket": {
+        "translation": "width_bucket",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0},
+            {"data_type": "double", "input_argument_nb": 1},
+            {"data_type": "double", "input_argument_nb": 2},
+            {"data_type": "bigint", "input_argument_nb": 3}
+        ],
+        "examples": [],
+        "returns": "bigint  "
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "coalesce": {
+        "translation": "coalesce",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": ["SELECT coalesce(NULL, 'a', NULL, 'b')"],
+        "returns": "any"
+    },
+    "if": {
+        "translation": "if",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "any", "input_argument_nb": 1},
+            {"data_type": "any", "input_argument_nb": 2}
+        ],
+        "examples": ["SELECT if(true, 1, 0)", "SELECT if(false, 1, 0)"],
+        "returns": "any"
+    },
+    "ifnull":{
+        "translation": "is null",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "any", "input_argument_nb": 1}
+        ],
+        "examples": [],
+        "returns": "string"
+    },
+    "isnull": {
+        "translation": "is null",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "varchar", "input_argument_nb": 1}
+        ],
+        "examples": [],
+        "returns": "string"
+    },
+    "nullif": {
+        "translation": "nullif",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "any", "input_argument_nb": 1}
+        ],
+        "examples": ["select nullif(1,1)"],
+        "returns": "nullif"
+    },
+    "nvl": {
+        "translation": "is null",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "any", "input_argument_nb": 1}
+        ],
+        "examples": ["SELECT nvl('a', NULL)"],
+        "returns": "any"
+    },
+    "nvl2": {
+        "translation": "is not null",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "any", "input_argument_nb": 1},
+            {"data_type": "any", "input_argument_nb": 2}
+        ],
+        "examples": ["SELECT nvl('a', NULL)"],
+        "returns": "any"
+    }
+}

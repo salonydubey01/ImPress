@@ -1,0 +1,254 @@
+{
+    "array": {
+        "translation": "array",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": ["SELECT array(1, 2)"],
+        "returns": "array"
+    },
+    "bitand": {
+        "translation": "bitwise_and",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1}
+        ],
+        "examples": ["select bitand(255, 32767);"],
+        "returns": "bigint"
+    },
+    "bitnot": {
+        "translation": "bitwise_not",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0}
+        ],
+        "examples": ["select bitnot(127);"],
+        "returns": "bigint"
+    },
+    "bitor": {
+        "translation": "bitwise_or",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1}
+        ],
+        "examples": ["select bitor(255, 32767);"],
+        "returns": "bigint"
+    },
+    "bitxor": {
+        "translation": "bitwise_xor",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1}
+        ],
+        "examples": ["select bitor(255, 32767);"],
+        "returns": "bigint"
+    },
+    "shiftleft": {
+        "translation": "bitwise_shift_left",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1},
+            {"data_type": "bigint", "input_argument_nb": "8"}
+        ],
+        "examples": ["select shiftleft(1,3);"],
+        "returns": "bigint"
+    },
+    "shiftright": {
+        "translation": "bitwise_logical_shift_right",
+        "signature": [
+            {"data_type": "bigint", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1},
+            {"data_type": "bigint", "input_argument_nb": "8"}
+        ],
+        "examples": ["select shiftleft(7,2);"],
+        "returns": "bigint"
+    },
+    "date": {
+        "translation": "date",
+        "signature": [
+            {"data_type": "timestamp", "input_argument_nb": 0}
+        ],
+        "examples": ["select date('2020-10-25')", "select date('2020-03-25 16:32:01')"],
+        "returns": "varchar"
+    },
+    "dense_rank": {
+        "translation": "dense_rank",
+        "signature": [
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, dense_rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "bigint"
+    },
+    "distinct": {
+        "translation": "distinct",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "returns": "any"
+    },
+    "first_value": {
+        "translation": "first_value",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, first_value(name) OVER (ORDER BY name) FROM a", "presto": "SELECT name, first_value(name) OVER (ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "any"
+    },
+    "int": {
+        "translation": "floor",
+        "signature": [
+            {"data_type": "double", "input_argument_nb": 0}
+        ],
+        "examples": ["select int(1)", "select int(1.1)"],
+        "returns": "bigint"
+    },    
+    "lag": {
+        "translation": "lag",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1, "optional": true},
+            {"data_type": "any", "input_argument_nb": 2, "optional": true}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, lag(name) OVER (ORDER BY name) FROM a", "presto": "SELECT name, lag(name) OVER (ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "any"
+    },
+    "last_value": {
+        "translation": "last_value",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, last_value(name) OVER (ORDER BY name) FROM a", "presto": "SELECT name, last_value(name) OVER (ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "any"
+    },
+    "lead": {
+        "translation": "lead",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0},
+            {"data_type": "bigint", "input_argument_nb": 1, "optional": true},
+            {"data_type": "any", "input_argument_nb": 2, "optional": true}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, lead(name) OVER (ORDER BY name) FROM a", "presto": "SELECT name, lead(name) OVER (ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "any"
+    },
+    "over": {
+        "translation": "over",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "any"
+    },
+    "partition": {
+        "translation": "partition",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": [],
+        "returns": "any"
+    },
+    "ntile": {
+        "translation": "ntile",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0}
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "bigint"
+    },
+    "cume_dist": {
+        "translation": "cume_dist",
+        "signature": [
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "bigint"
+    },
+    "percent_rank": {
+        "translation": "percent_rank",
+        "signature": [
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "double"
+    },
+    "rank": {
+        "translation": "rank",
+        "signature": [
+        ],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM a", "presto": "SELECT name, rank() OVER (PARTITION BY null ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "bigint"
+    },
+    "row_number": {
+        "translation": "row_number",
+        "signature": [],
+        "examples": [{"impala": "with a as (select stack(3, 'Africa', 'America', 'Europe') as name) SELECT name, row_number() OVER (ORDER BY name) FROM a", "presto": "SELECT name, row_number() OVER (ORDER BY name) FROM (values ('Africa'), ('America'), ('Europe')) as t(name)"}],
+        "returns": "bigint"
+    },
+    "timestamp": {
+        "translation": "cast",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0}
+        ],
+        "examples": ["select timestamp('2020-03-25')", "select timestamp('2020-03-25 16:32:01')"],
+        "returns": "timestamp"
+    },
+    "typeof": {
+        "translation": "typeof",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": 0}
+        ],
+        "examples": ["typeof(2)"],
+        "returns": "bigint"
+    },
+    "unnest": {
+        "translation": "unnest",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "compositions": [
+            {"formula": "{arg}", "args": "all", "merged": true}
+        ],
+        "returns": "any"
+    },
+    "zzz_function_placeholder_do_not_use": {
+        "translation": "zzz_function_placeholder_do_not_use",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"}
+        ],
+        "examples": ["select zzz_function_placeholder_do_not_use"],
+        "returns": "any"
+    },
+    "zzz_test_no_args_impala": {
+        "translation": "zzz_test_no_args_presto",
+        "signature": [],
+        "examples": ["select zzz_test_no_args_impala"],
+        "returns": "any"
+    },
+    "zzz_test_not_yet_implemented": {
+        "translation": "zzzzzzz",
+        "signature": [
+            {"data_type": "any", "input_argument_nb": "unlimited"},
+            {"data_type": "any", "input_argument_nb": 1}
+        ],
+        "examples": ["select zzz_test_not_yet_implemented"],
+        "returns": "any"
+    },
+    "round": {
+                "translation": "round",
+                "signature": [],
+                "examples": ["select round(127.095,2)"],
+                "returns": "round"
+            },
+    "locate": {
+                "translation": "strpos",
+                "signature": [],
+                "examples": [],
+                "returns": "strpos"
+            },
+    "dround": {
+    "translation": "round",
+    "signature": [],
+    "examples": ["select dround(127.095,2)"],
+    "returns": "round"
+}
+
+
+
+
+    
+}

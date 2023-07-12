@@ -1,0 +1,15 @@
+python KPMGTranslator.py -l "lineage" -vl "C:\impress_new\views\views_list.xlsx"
+
+python KPMGTranslator.py -s "create_schema" -suffix "_new" -m "C:\impress_new\impala_data_objects.xlsx"
+
+python KPMGTranslator.py -s "create_schema" -prefix "new_" -m "C:\impress_new\tables_and_views_generated.xlsx"
+
+python KPMGTranslator.py -t "translator" -suffix "_new" -m "C:\impress_new\impala_data_objects.xlsx"
+
+python KPMGTranslator.py -f "C:\impress_new\input"
+
+python KPMGTranslator.py -t "translator" -prefix "presto_" -m "C:\impress_new\tables_and_views_generated.xlsx"
+
+python KPMGTranslator.py -v "Yes" -i "C:\impress_new\impala_queries_validator" -p "C:\impress_new\impala_queries_validator_output" -ih "3.110.89.145" -ip "21050" -ph "3.6.40.40" -pp "8889" -pc "hive" -ps "presto_db"
+
+python KPMGTranslator.py -l "lineage" -vl "C:\impress_new\views\views_list.xlsx" -s "create_schema" -suffix "_new" -t "translator" -suffix "_new"
